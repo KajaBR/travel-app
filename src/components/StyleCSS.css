@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(58, 57, 57);
+    color: aliceblue;
+
+}
+
+.App{
+    display: grid;
+    grid-template-columns: 
+    [leftstart] 200px
+    [centerstart centerstop] auto 
+    [rightstop] 400px;
+    grid-template-rows: 
+    [topbar] 80px 
+    [textstart textstop] auto 
+    [footer] 300px;
+}
+
+.topBar {
+    grid-column: centerstart/centerstop;
+    grid-row: topbar;
+}
+
+.malta{
+    grid-column: centerstart/centerstop;
+    grid-row: textstart/textstop;
+    padding-bottom: 30px;
+}
+
+.footer{
+    grid-column: leftstart/leftstop;
+    grid-row: footer;
+    background-color: rgb(39, 38, 38);
+}
