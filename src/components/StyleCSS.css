@@ -3,35 +3,71 @@
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(58, 57, 57);
-    color: aliceblue;
+    color: rgb(255, 253, 232);
 
 }
 
 .App{
     display: grid;
     grid-template-columns: 
-    [leftstart] 200px
-    [centerstart centerstop] auto 
+    [leftstart] 400px
+    [centerstart] 300px
+    [centerline] auto
     [rightstop] 400px;
-    grid-template-rows: 
-    [topbar] 80px 
+    grid-template-rows:
+    [menubar] 82px 
+    [topbar] 595px 
+    [maps] 600px
     [textstart textstop] auto 
     [footer] 300px;
 }
 
-.topBar {
-    grid-column: centerstart/centerstop;
-    grid-row: topbar;
+.menu{
+    grid-column: rightstop;
+    grid-row: menubar;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
+
+.topFoto {
+    grid-column: leftstart/centerstop;
+    grid-row: topbar;
+    background-image: url("/public/img/Maspalmas.jpg");    
+}
+
+.logo {
+    grid-column: leftstart;
+    grid-row: menubar;
+}
+
+.maps{
+    grid-column: centerstart;
+    grid-row: maps;
+    display:flex ;
+    
+}
+
+
+
 .malta{
-    grid-column: centerstart/centerstop;
+    grid-column: centerline;
     grid-row: textstart/textstop;
     padding-bottom: 30px;
+}
+
+.rightBar{
+    grid-column: rightstop;
+    grid-row: textstop/footer
 }
 
 .footer{
     grid-column: leftstart/leftstop;
     grid-row: footer;
     background-color: rgb(39, 38, 38);
+}
+
+.imgValetta{
+    grid-column: leftstart;
 }

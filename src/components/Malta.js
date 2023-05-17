@@ -1,7 +1,13 @@
 import React, { useState } from "react";
+import "./StyleCSS.css";
+
 
 export const Malta = () => {
     const [showMore, setShowMore] = useState(false);
+
+    const valettaBalcons ={
+        url: "./img/ValettaBalcons.jpg"
+    }
 
   
     return(
@@ -12,6 +18,7 @@ export const Malta = () => {
             {showMore ? (<p>
                 
                 <h3>Valetta</h3>
+                <img src={valettaBalcons.url} alt="Valetta" width="400"/>
                 
                 Numer jeden, który powinnien się znaleźć na
                 Twojej liście to oczywiście stolica Malty, czyli Valetta. 
@@ -35,6 +42,9 @@ export const Malta = () => {
 
                 <button onClick={() => {setShowMore((prevState) => !prevState)}}>{showMore ? "Pokaż mniej" : 
                 "Pokaż więcej"}</button>
+                
+
+
         </article>
     )
 }

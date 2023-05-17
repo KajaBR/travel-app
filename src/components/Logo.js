@@ -1,13 +1,15 @@
 import React from "react";
 
+
 export const Logo = () => {
     const logo = {
-        url: "./img/aboutTravel"
+        url: "img/aTLogo.jpg"
     }
 
     return(
         <div>
-           <img src={logo} alt="aboutTravel" />
+           <img src={logo.url} alt="aboutTravel" width="200"
+           style={{}}/>
         </div>
     )
 }
